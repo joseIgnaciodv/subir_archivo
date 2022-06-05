@@ -13,6 +13,6 @@ export class SubirArchivoService {
 
   subir_archivo(asignatura: string | null, tipo: string | null, nombre: string | null, contenido: any, nombre_fichero: string, titulacion: string | null, codigo: string | null): Observable<Respuesta>{
     let datos = {"asignatura": asignatura, "tipo": tipo, "nombre": nombre, "contenido": contenido, "fichero": nombre_fichero, "titulacion": titulacion, "cod_asigna": codigo}
-    return this.http.post<Respuesta>("https://apitfg-rbq2sbfjha-nw.a.run.app/sharepoint/subir_archivo", datos);
+    return this.http.post<Respuesta>("https://apitfg-pjnvovnr5a-nw.a.run.app/sharepoint/subir_archivo", datos);
   }
 }
