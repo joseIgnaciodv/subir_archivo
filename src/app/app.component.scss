@@ -1,91 +1,71 @@
-@media only screen and (max-width: 600px){
-    .contenedor_img{
-        margin: 2.5% 10%;
-        width: 80%;
-        & img{
-            width: 100%;
-        }
-    }
-
-    .linea{
-        width: 80%;
-        margin: 1% 10%;
-        border-bottom: 3.25px solid #3F51B5;
-    }
-
-    .titulo{
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 22px;
-        font-weight: 500;
-        margin: 0 13%;
-        color: coral;
-    }
-
-    .contenedor_nombre{
-        width: 80%;
-        margin: 2.5% 10%;
-        border-radius: 15px;
-        border: 2px solid lightseagreen;
-
-        & span{
-            margin-left: 3%;
-            margin-top: 3%;
-            font-weight: 500;
-        }
-    }
-
-    h1{
-        font-size: 18px;
-        margin: 0.75% 6%;
-    }
-
-    .contenedor{
-        width: 80%;
-        margin: 2.5% 10%;
-    }
-    
-    .campo{
+.contenedor_img{
+    margin: 2.5% 10%;
+    width: 80%;
+    & img{
         width: 100%;
-    }
-
-    .espacio_descripcion{
-        height: 175px;
-    }
-
-    .contenedor_subir{
-        margin: 2% 10%;
-    }
-
-    .contenedor_boton{
-        width: 80%;
-        margin: 3.25% 25%;
-
-        & .boton_subir{
-            width: 60%;
-            border-radius: 15px;
-        }
-    }
-
-    .espacio{
-        width: 100%;
-        height: 40px;
     }
 }
 
-@media only screen and (min-width: 481px){
-    .contenedor_general{
-        margin: auto;
-        width: 65%;
-        height: 50%;
-        border-radius: 20px;
-        border: 2px solid #3F51B5;
-    }
+.linea{
+    width: 80%;
+    margin: 1% 10%;
+    border-bottom: 3.25px solid #3F51B5;
+}
 
-    .contenedor_img{
-        width: 50%;
-        margin: 3% 10%;
-        & img{
-            width: 100%;
-        }
+.titulo{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 13%;
+    color: coral;
+}
+
+.contenedor_nombre{
+    width: 80%;
+    margin: 2.5% 10%;
+    border-radius: 15px;
+    border: 2px solid lightseagreen;
+
+    & span{
+        margin-left: 3%;
+        margin-top: 3%;
+        font-weight: 500;
     }
+}
+
+h1{
+    font-size: 18px;
+    margin: 0.75% 6%;
+}
+
+.contenedor{
+    width: 80%;
+    margin: 2.5% 10%;
+}
+
+.campo{
+    width: 100%;
+}
+
+.espacio_descripcion{
+    height: 175px;
+}
+
+.contenedor_subir{
+    margin: 2% 10%;
+}
+
+.contenedor_boton{
+    width: 80%;
+    margin: 3.25% 25%;
+
+    & .boton_subir{
+        width: 60%;
+        border-radius: 15px;
+    }
+}
+
+.espacio{
+    width: 100%;
+    height: 40px;
 }
