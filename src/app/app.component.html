@@ -1,66 +1,74 @@
-<div class="contenedor_general">
-    <div class="contenedor_img">
-        <img src="assets\images\uem.svg" alt="">
-    </div>
-    
-    <h1 class="titulo">Subir Evidencia</h1>
-    <div class="linea"></div>
-    
-    <div class="contenedor_nombre">
-        <span>Nombre Evidencia:</span>
-        <h1>{{nombre}}</h1>
-    </div>
-    
-    <div class="contenedor">
-        <mat-form-field appearance="outline" class="campo">
-            <mat-label>Profesor</mat-label>
-            <input matInput value={{profesor}}>
-        </mat-form-field>
-    </div>
-    
-    <div class="contenedor">
-        <mat-form-field appearance="outline" class="campo">
-            <mat-label>Asignatura</mat-label>
-            <input matInput value={{asignatura}}>
-        </mat-form-field>
-    </div>
+<div *ngIf="cargando" class="contenedor_spinner">
+    <mat-progress-spinner class="spinner" mode="indeterminate"></mat-progress-spinner>
+    <span>Cargando . . .</span>
+</div>
 
-    <div class="contenedor">
-        <mat-form-field appearance="outline" class="campo">
-            <mat-label>Titulacion</mat-label>
-            <input matInput value={{titulacion}}>
-        </mat-form-field>
-    </div>
+<div *ngIf="!cargando">
+    <div class="contenedor_general">
+        <div class="contenedor_img">
+            <img src="assets\images\uem.svg" alt="">
+        </div>
 
-    <div class="contenedor">
-        <mat-form-field appearance="outline" class="campo">
-            <mat-label>Codigo Asignatura</mat-label>
-            <input matInput value={{codigo}}>
-        </mat-form-field>
-    </div>
+        <h1 class="titulo">Subir Evidencia</h1>
+        <div class="linea"></div>
 
-    
-    <div class="contenedor">
-        <mat-form-field appearance="outline" class="campo">
-            <mat-label>Tipo de Evidencia</mat-label>
-            <input matInput value={{tipo}}>
-        </mat-form-field>
-    </div>
-    
-    <div class="contenedor">
-        <mat-form-field appearance="outline" class="campo">
-            <mat-label>Descripcion</mat-label>
-            <textarea class="espacio_descripcion" matInput>{{descripcion}}</textarea> 
-        </mat-form-field>
-    </div>
-    
-    <div class="contenedor_subir">
-        <input (change)="get_nombre_fichero($event)" type="file" name="archivo" id="archivo">
-    </div>
-    
-    <div class="contenedor_boton">
-        <button class="boton_subir" mat-raised-button color="primary" (click)="subir_archivo()">Subir Evidencia</button>
-    </div>
+        <div class="contenedor_nombre">
+            <span>Nombre Evidencia:</span>
+            <h1>{{nombre}}</h1>
+        </div>
 
-    <div class="espacio"></div>
+        <div class="contenedor">
+            <mat-form-field appearance="outline" class="campo">
+                <mat-label>Profesor</mat-label>
+                <input matInput value={{profesor}}>
+            </mat-form-field>
+        </div>
+
+        <div class="contenedor">
+            <mat-form-field appearance="outline" class="campo">
+                <mat-label>Asignatura</mat-label>
+                <input matInput value={{asignatura}}>
+            </mat-form-field>
+        </div>
+
+        <div class="contenedor">
+            <mat-form-field appearance="outline" class="campo">
+                <mat-label>Titulacion</mat-label>
+                <input matInput value={{titulacion}}>
+            </mat-form-field>
+        </div>
+
+        <div class="contenedor">
+            <mat-form-field appearance="outline" class="campo">
+                <mat-label>Codigo Asignatura</mat-label>
+                <input matInput value={{codigo}}>
+            </mat-form-field>
+        </div>
+
+
+        <div class="contenedor">
+            <mat-form-field appearance="outline" class="campo">
+                <mat-label>Tipo de Evidencia</mat-label>
+                <input matInput value={{tipo}}>
+            </mat-form-field>
+        </div>
+
+        <div class="contenedor">
+            <mat-form-field appearance="outline" class="campo">
+                <mat-label>Descripcion</mat-label>
+                <textarea class="espacio_descripcion" matInput>{{descripcion}}</textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="contenedor_subir">
+            <input (change)="get_nombre_fichero($event)" type="file" name="archivo" id="archivo">
+        </div>
+
+        <div class="contenedor_boton">
+            <button class="boton_subir" mat-raised-button color="primary" (click)="subir_archivo()">Subir
+                Evidencia</button>
+        </div>
+
+        <div class="espacio"></div>
+    </div>
 </div>

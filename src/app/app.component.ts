@@ -21,6 +21,8 @@ export class AppComponent {
   fichero: ArrayBuffer | string | null = "";
   nom_fichero: string = "";
   contenido: any;
+
+  cargando: boolean = true;
   constructor(private api: SubirArchivoService, private mensaje: MatSnackBar) { }
 
   get_nombre_fichero(event: Event){
@@ -35,17 +37,22 @@ export class AppComponent {
   }
 
   subir_archivo(){
+    this.cargando = true;
     this.api.subir_archivo(this.asignatura, this.tipo, this.nombre, this.contenido, this.nom_fichero, this.titulacion, this.codigo).subscribe(respuesta =>{
       if(respuesta.exito == 200){
         this.mensaje.open('Fichero subido correctamente', 'OK')
+        this.cargando = false;
       }
       else{
         this.mensaje.open('Fichero no se ha subido correctamente', 'OK')
+        this.cargando = false;
       }
     })
+    this.cargando = false;
   }
 
   ngOnInit(): void {
+    this.cargando = true;
     let query = window.location.search;
     let parametros = new URLSearchParams(query);
     this.profesor = parametros.get('profesor')
@@ -55,5 +62,6 @@ export class AppComponent {
     this.descripcion = parametros.get('descripcion')
     this.titulacion = parametros.get('titulacion')
     this.codigo = parametros.get('codigo')
+    this.cargando = false;
   }
 }
