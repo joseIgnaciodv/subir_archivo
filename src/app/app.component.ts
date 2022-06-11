@@ -48,7 +48,6 @@ export class AppComponent {
         this.cargando = false;
       }
     })
-    this.cargando = false;
   }
 
   ngOnInit(): void {
